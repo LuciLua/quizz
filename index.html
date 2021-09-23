@@ -10,12 +10,23 @@
 </head>
 <body>
     <header>
-        <nav>
-            <div class="logo"><h1>QuizzJoke</h1></div>
+        <nav class="menu">
+            <div class="logo"><h1>QuizzGame</h1></div>
             <ul>
-                <a href=""><li>Home</li></a>
-                <a href=""><li>Quizzes</li></a>
-                <a href=""><li>Perfil</li></a>
+                <li><a href="">Jogar</a></li>
+                <li><a href="">Quizzes</a></li>
+                <li onclick="profileOpen()"><img src="img/profile.jpg" alt=""></li>
+                <div class="closed">
+                    <div class="profileOpenned">
+                        <ul>
+                            <a href="li">Profile</a>
+                            <a href="li">Amigos</a>
+                            <a href="li">Tema</a>
+                            <a href="li">Configuração</a>
+                        </ul>
+                    </div>
+                    <div class="triangule"></div>
+                </div>
             </ul>
         </nav>
     </header>
@@ -25,24 +36,24 @@
                 <div class="content">
                     <div class="pergunta">
                         <h1>01.</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet nulla inventore architecto neque reprehenderit quas ipsum voluptatum ex, dolorem tempora aperiam beatae provident vel itaque, facere aspernatur animi dicta adipisci?</p>
+                        <p>Qual é a capital do Brasil?</p>
                     </div>
                     <div class="respostas">
                         <div class="resposta">
                             <input type="radio" name="perguntaA" id="respostaA">
-                            <label for="respostaA">A</label>
+                            <label for="respostaA">São Paulo</label>
                         </div>
                         <div class="resposta">
                             <input type="radio" name="perguntaA" id="respostaB">
-                            <label for="respostaB">B</label>
+                            <label for="respostaB">Rio de janeiro</label>
                         </div>
                         <div class="resposta">    
                             <input type="radio" name="perguntaA" id="respostaC">
-                            <label for="respostaC">C</label>
+                            <label for="respostaC">Brasilia</label>
                         </div>
                         <div class="resposta">
                             <input type="radio" name="perguntaA" id="respostaD">
-                            <label for="respostaD">D</label>
+                            <label for="respostaD">Belo Horizonte</label>
                         </div>
                     </div>
                 </div>
