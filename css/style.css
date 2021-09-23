@@ -1,0 +1,200 @@
+*::before, *, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Estructure*/
+
+body{
+    width: 100%;
+    min-height: 100vh;
+}
+
+footer, header{
+    width: 100%;
+    min-height: 80px;
+    position: relative;
+    background-color: rgb(22, 22, 22);
+}
+
+header{
+    top: 0;
+}
+
+footer{
+    bottom: 0;
+}
+
+main{
+    background-color: rgb(218, 218, 218);
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/*menu*/
+
+nav{
+    width: 100%;
+    height: 100%;
+    min-height: 80px;
+
+    display: flex;
+    position: relative;
+}
+
+nav .logo{
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px 30px;
+
+    color: #fff;
+}
+
+nav .logo h1{
+    font-size: 25px;
+    font-family: Arial;
+}
+
+nav ul{
+    width: 100%;
+    display: flex;
+
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+nav ul a{
+    margin: 0 5px 0 5px;
+    text-decoration: none;
+
+    height: fit-content;
+    width: fit-content;
+
+    padding: 10px 20px;
+
+    color: rgb(255, 255, 255);
+    font-family: arial;
+    font-weight: 600;
+}
+
+nav ul a li{
+    list-style: none;
+} 
+
+
+/* footer */
+
+footer{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*main*/
+
+main .container{
+    width: 100%;
+    height: 100%;
+    min-height: calc(100vh - 160px);
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container .box{
+    max-width: 800px;
+    /* min-height: 400px; */
+    position: relative;
+
+    padding: 50px;
+
+    margin: 20px;
+
+    border-radius: 30px;
+
+    border: 1px solid rgba(73, 89, 104, 0.302);
+
+    background-color: rgba(255, 255, 255, 0.281);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.box .content{
+    max-width: 700px;
+    height: fit-content;
+
+    /* background-color: aquamarine; */
+}
+
+.box .pergunta{
+    width: 100%;
+}
+
+.box .pergunta h1{
+    color: rgb(22, 22, 22);
+    font-family: Arial;
+}
+
+.box .pergunta p{
+    line-height: 1.5;
+    padding: 20px;
+
+    color: rgba(53, 53, 53, 0.912);
+    font-family: Arial;
+}
+
+.box .respostas{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    margin-right: auto;
+
+    /* border:  1px solid red; */
+
+    position: relative;
+
+    padding: 20px;
+}
+
+.box .respostas .resposta{
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(255, 255, 255, 0.364);
+    border: 1px solid rgba(66, 65, 67, 0.438);
+    margin: 5px 0 5px 0;
+
+    width: 250px;
+    height: 50px;
+    border-radius: 4px;
+
+    align-items: center;
+}
+
+.box .respostas .resposta input{
+
+    margin-right: 10px;
+
+}
+
+.box .respostas .resposta label{
+    color: rgb(27, 47, 199);
+    font-weight: 900;
+    font-family: Arial;
+}
