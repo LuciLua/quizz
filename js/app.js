@@ -25,3 +25,10 @@ const toggleTheme = () => {
         document.querySelector('main').style.background="#FFF"
     }
 }
+
+function openMenu(){
+    var menu = document.querySelector('.itensMenu')
+    menu.classList.toggle('menuOpen')
+    var structureMenu= document.querySelector('.menu')
+    structureMenu.classList.toggle('menuColum')
+}
