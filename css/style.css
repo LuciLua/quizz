@@ -252,11 +252,13 @@ main .container{
     margin: 20px;
 }
 
+.box .respostas .resposta:hover{
+    background-color: rgba(20, 81, 236, 0.14);
+}
+
 .box .respostas .resposta.active{
     background-color: rgb(102, 20, 236);
 }
-
-
 
 .box .respostas .resposta.active label{
     color: #fff;
@@ -266,8 +268,7 @@ main .container{
 
     margin-right: 10px;
     position: absolute;
-
-    /* opacity: 0%; */
+    display: none;
 }
 
 .box .respostas .resposta label{
