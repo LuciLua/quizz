@@ -9,6 +9,7 @@
 body{
     width: 100%;
     min-height: 100vh;
+    font-family: 'rawline500';
 }
 
 footer, header{
@@ -27,7 +28,7 @@ footer{
 }
 
 main{
-    background-color: rgb(218, 218, 218);
+    background-color: rgb(255, 255, 255);
     
     width: 100%;
     height: 100%;
@@ -42,9 +43,18 @@ header .menu{
     width: 100%;
     height: 100%;
     min-height: 80px;
-
+    
     display: flex;
     position: relative;
+}
+
+@font-face {
+    font-family: 'antapani';
+    src: url('../font/Antapani-ExtraBold.otf');
+}
+@font-face {
+    font-family: 'rawline500';
+    src: url('../font/rawline-500.ttf');
 }
 
 header .menu .logo{
@@ -56,11 +66,13 @@ header .menu .logo{
     padding: 10px 30px;
 
     color: #fff;
+
+    margin-left: 20px;
 }
 
 header .menu .logo h1{
     font-size: 25px;
-    font-family: Arial;
+    font-family: 'antapani';
 }
 
 header .menu ul{
@@ -70,6 +82,8 @@ header .menu ul{
     display: flex;
     align-items: center;
     justify-content: end;
+
+    margin-right: 50px;
 }
 
 
@@ -79,13 +93,13 @@ header .menu ul li{
     height: fit-content;
     width: fit-content;
     
-    padding: 10px 20px;
-    
     color: rgb(255, 255, 255);
-    font-family: arial;
     font-weight: 600;
     
-    border-radius: 30px;
+}
+
+header .menu ul li a:hover{
+    background-color: rgba(255, 255, 255, 0.193);
 }
 
 header .menu ul li a{
@@ -93,11 +107,17 @@ header .menu ul li a{
     width: 100%;
     height: 100%;
 
+    border-radius: 30px;
+    
     position: relative;
     color: #fff;
+
+    padding: 10px 20px;
+
 }
 
-header .menu ul li:nth-child(1){
+
+header .menu ul li:nth-child(1) a{
     background-color: rgba(255, 255, 255, 0.193);
 }
 
@@ -163,7 +183,7 @@ main .container{
 
     border-radius: 30px;
 
-    border: 1px solid rgba(73, 89, 104, 0.302);
+    border: 1px solid #E5E5E5;
 
     background-color: rgba(255, 255, 255, 0.281);
 
@@ -186,7 +206,6 @@ main .container{
 
 .box .pergunta h1{
     color: rgb(22, 22, 22);
-    font-family: Arial;
 }
 
 .box .pergunta p{
@@ -196,7 +215,6 @@ main .container{
     text-align: center;
 
     color: rgba(22, 22, 22, 0.912);
-    font-family: Arial;
     font-weight: 800;
 }
 
@@ -219,9 +237,9 @@ main .container{
     flex-direction: row;
 
     background-color: rgba(255, 255, 255, 0.063);
-    border: 1px solid rgba(66, 65, 67, 0.438);
+    border: 1px solid #E5E5E5;
 
-    box-shadow: 0 0 13px rgba(47, 59, 225, 0.138);
+    box-shadow: 0 0 13px rgba(47, 59, 225, 0.028);
     
     margin: 5px 0 5px 0;
 
@@ -234,9 +252,12 @@ main .container{
     margin: 20px;
 }
 
-.box .respostas .resposta:hover{
+.box .respostas .resposta.active{
     background-color: rgb(102, 20, 236);
 }
+
+
+
 .box .respostas .resposta:hover > label{
     color: #fff;
 }
@@ -252,7 +273,6 @@ main .container{
 .box .respostas .resposta label{
     color: rgb(27, 47, 199);
     font-weight: 900;
-    font-family: Arial;
 
     font-size: 13px;
 
@@ -284,28 +304,29 @@ header .open .profileOpenned{
     height: 200px;
 
     border-radius: 5px;
-    background-color: rgb(223, 223, 223);
-
-    border: 1px solid  rgb(97, 97, 97);
-
+    background-color: rgb(248, 248, 248);
+    
+    border: 1px solid  rgb(177, 177, 194);
+    
     z-index: 9;
-
+    
     top: 71px;
-    right: 13px;
+    right: 65px;
 }
 
 header .open .triangule{
+    background-color: rgb(248, 248, 248);
+
     position: absolute;
     width: 15px;
     height: 15px;
     transform: rotate(45deg);
-    background-color: rgb(223, 223, 223);
 
     border-left: 1px solid  rgb(97, 97, 97);
     border-top: 1px solid  rgb(97, 97, 97);
     z-index: 10;
 
-    right: 20px;
+    right: 69px;
     top: 64px;
 }
 
@@ -333,4 +354,23 @@ header .menu .open .profileOpenned ul a{
     text-decoration: none;
 
     background: transparent;
+}
+
+header .menu .open .toggleTheme{
+    width: 50px;
+    height: 20px;
+    border: 1px solid rgb(106, 106, 106);
+    border-radius: 30px;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+header .menu .open .toggleTheme .ballTheme{
+    width: 20px;
+    height: 20px;
+    
+    border-radius: 60%;
+    background-color: #222;
+    position: relative;
 }
