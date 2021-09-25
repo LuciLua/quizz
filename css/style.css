@@ -10,6 +10,8 @@ body{
     width: 100%;
     min-height: 100vh;
     font-family: 'rawline500';
+
+    overflow: hidden;
 }
 
 footer, header{
@@ -46,6 +48,8 @@ header .menu{
     
     display: flex;
     position: relative;
+
+    z-index: 10;
 }
 
 @font-face {
@@ -360,18 +364,58 @@ header .menu .open .profileOpenned ul a{
 header .menu .open .toggleTheme{
     width: 50px;
     height: 20px;
-    border: 1px solid rgb(106, 106, 106);
+    border: 1px solid rgb(74, 67, 75);
     border-radius: 30px;
+    overflow: hidden;
 
     position: relative;
     display: flex;
     align-items: center;
+
+    cursor: pointer;
 }
 header .menu .open .toggleTheme .ballTheme{
     width: 20px;
     height: 20px;
     
     border-radius: 60%;
-    background-color: #222;
+    background-color: #7C37D6;
     position: relative;
+}
+
+header .menu .open .toggleTheme .left{
+    left: 0;
+    transition: 0.3s;
+}
+header .menu .open .toggleTheme .right{
+    left: 28px;
+    transition: 0.3s;
+}
+
+header .retangle{
+    width: calc(100% + 20px);
+    height: 100px;
+    background-color: #7C37D6;
+    
+    position: absolute;
+
+    right: -10px;
+    top: 0;
+    z-index: 0;
+}
+
+header .retangle:nth-child(1){
+    transform: rotateZ(2deg);
+    background-color: #7C37D6;
+    z-index: 0;
+    border-radius: 10% 10% / 13% 13%;
+}
+header .retangle:nth-child(2){
+    border-radius: 30% 12% / 22% 43%;
+    transform: rotateZ(-1deg);
+}
+
+
+header .menu ul .open .tema{
+    display: flex;
 }

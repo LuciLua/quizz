@@ -15,3 +15,13 @@ function remove(a){
 
 var respostas = document.querySelectorAll(".resposta")
 respostas.forEach(e => e.addEventListener('click', () => active(e)))
+
+const toggleTheme = () => {
+    document.querySelector('.left').classList.toggle('right')
+    
+    if(document.querySelector('.right')){
+        document.querySelector('main').style.background="#797979"
+    } else {
+        document.querySelector('main').style.background="#FFF"
+    }
+}
