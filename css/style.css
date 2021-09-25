@@ -258,7 +258,7 @@ main .container{
 
 
 
-.box .respostas .resposta:hover > label{
+.box .respostas .resposta.active label{
     color: #fff;
 }
 

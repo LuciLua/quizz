@@ -3,28 +3,14 @@ function profileOpen() {
     tab.classList.toggle('open')
 } 
 
-function active() {
-    // for(let i = 0; i < resposta.length; i++){
-    //     resposta[i].classList.add('active')
-    //     console.log('ola', resposta[i], i)
-console.log('ola')
-    //}
+function active(e){
+    e.classList.add('active')
+    var actives = document.querySelectorAll(".active")
+    if(actives.length > 1) actives.forEach(a => remove(a))
 }
 
-
-// respostas.addEventListener('click', active())
-
-// window.addEventListener('keydown', event => 
-// {
-//     if(event.key === '1'){
-//         var respostas = document.querySelectorAll(".resposta")
-//         respostas.forEach(e => e.classList.add('active'))
-//     }
-// })
-
-
-function active(e){
-   e.classList.add('active')
+function remove(a){
+    a.classList.remove('active')
 }
 
 var respostas = document.querySelectorAll(".resposta")
