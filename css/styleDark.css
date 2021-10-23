@@ -1,0 +1,52 @@
+.darkTheme{
+    background-color: #2e2d30;
+}
+
+.darkTheme .container .box{
+
+    background-color: #171720;
+    border-color: rgb(83, 0, 248);
+    box-shadow: 0 0 13px rgb(83, 0, 248);
+
+}
+
+.darkTheme .container .box .content .pergunta > p,
+.darkTheme .container .box .content .pergunta > h1
+{
+    color: rgb(213, 213, 213);
+}
+
+.darkTheme .container .box .content .respostas .resposta{
+    border-color: #424250;
+    background-color: #1b1b24;
+}
+
+.darkTheme .container .box .content .respostas .resposta > label{
+    color: rgb(172, 172, 172);
+    overflow: hidden;
+}
+
+.darkTheme .container .box .respostas .resposta:hover{
+    background-color: rgba(35, 34, 38, 0.138);
+}
+
+.darkTheme .container  .box .respostas .resposta.active{
+    background-color: rgba(83, 0, 248, 0.124);
+    box-shadow: 0 0 13px rgb(83, 0, 248);
+}
+
+.darkTheme .container .box .respostas .resposta.active label{
+    color: rgb(240, 232, 255);
+}
+
+/* profile dark */
+header .menu .open .darkTheme,
+header .menu .open .darkTheme + .triangule{
+    background-color: rgb(31, 32, 34);
+    border-color: rgb(145, 145, 163);
+}
+
+header .menu .open .darkTheme ul li a,
+header .menu .open .darkTheme ul li > .tema{
+    color: rgb(232, 232, 232);
+}

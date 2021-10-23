@@ -20,9 +20,12 @@ const toggleTheme = () => {
     document.querySelector('.left').classList.toggle('right')
     
     if(document.querySelector('.right')){
-        document.querySelector('main').style.background="#797979"
+        document.querySelector('main').classList.add('darkTheme')
+        document.querySelector('.profileOpenned').classList.add('darkTheme')
+        
     } else {
-        document.querySelector('main').style.background="#FFF"
+        document.querySelector('main').classList.remove('darkTheme')
+        document.querySelector('.profileOpenned').classList.remove('darkTheme')
     }
 }
 

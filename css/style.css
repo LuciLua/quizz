@@ -76,9 +76,6 @@ header .menu .logo h1{
     font-family: 'antapani';
 }
 
-header .menu ul{
-}
-
 header .menu .normal{
     width: 100%;
     display: flex;
@@ -105,8 +102,6 @@ header .menu .normal .btnHamburguer{
    
     display: none;
 }
-
-
 
 
 header .menu ul li{
@@ -333,8 +328,8 @@ main .container{
 
 .box .respostas .resposta label{
     color: rgb(27, 47, 199);
+    
     font-weight: 900;
-
     font-size: 13px;
 
     width: 100%;
@@ -348,16 +343,24 @@ main .container{
     cursor: pointer;
 }
 
-
 header .closed{
     display: none;
 }
 
 header .open{
     opacity: 80%;
-    z-index: 10;
+
     display: flex;
+
+    z-index: 10;
 }
+
+/*cor hamburguer profile*/
+header .open .profileOpenned,
+header .open .triangule{
+    background-color: rgb(241, 242, 245);
+}
+
 header .open .profileOpenned{
     position: absolute;
 
@@ -365,36 +368,38 @@ header .open .profileOpenned{
     height: 200px;
 
     border-radius: 5px;
-    background-color: rgb(248, 248, 248);
-    
-    border: 1px solid  rgb(177, 177, 194);
-    
-    z-index: 9;
+    border-width: 1px;
     
     top: 71px;
     right: 65px;
+
+    z-index: 9;
 }
 
 header .open .triangule{
-    background-color: rgb(248, 248, 248);
-
     position: absolute;
     width: 15px;
     height: 15px;
-    transform: rotate(45deg);
+    transform: rotate(50deg);
 
-    border-left: 1px solid  rgb(97, 97, 97);
-    border-top: 1px solid  rgb(97, 97, 97);
+    /* top, right, bottom and left  */
+    border-width: 1px 0 0 1px; 
+
     z-index: 10;
 
     right: 69px;
-    top: 64px;
+    top: 64.7px;
+}
+
+/* cor borda perfil aberto */
+header .open .profileOpenned,
+header .open .triangule{
+    border-style: solid;
+    border-color: rgb(172, 172, 172);
 }
 
 header .open .profileOpenned ul{
     list-style: none;
-
-    padding: 20px;
 
     display: flex;
     flex-direction: column;
@@ -407,22 +412,39 @@ header .open .profileOpenned ul{
     position: relative;
 }
 
-header .menu .open .profileOpenned ul a{
-    color: #222;
-    font-size: 15px;
-
-    margin: 5px;
+header .menu .open .profileOpenned ul li a{
     text-decoration: none;
-
     background: transparent;
 }
 
-header .menu .open .toggleTheme{
+header .menu .open .profileOpenned ul li a,
+header .menu .open .profileOpenned ul li > .tema{
+    color: rgb(68, 66, 66);
+    font-size: 15px;
+}
+
+header .menu .open .profileOpenned ul li > .tema{
+    bottom: 5px;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #181616;
+
+}
+
+header .menu .open .profileOpenned ul li .tema .toggleTheme{
     width: 50px;
     height: 20px;
-    border: 1px solid rgb(74, 67, 75);
+
+    border: 1px solid rgb(199, 199, 199);
     border-radius: 30px;
+
     overflow: hidden;
+
+    margin-left: 20px;
 
     position: relative;
     display: flex;
@@ -430,25 +452,31 @@ header .menu .open .toggleTheme{
 
     cursor: pointer;
 }
-header .menu .open .toggleTheme .ballTheme{
+
+header .menu .open .profileOpenned ul li .tema .toggleTheme .ballTheme{
     width: 20px;
     height: 20px;
     
     border-radius: 60%;
-    background-color: #7C37D6;
+    background-color: #5a5959;
     position: relative;
+
 }
 
-header .menu .open .toggleTheme .left{
+/*ball toggle theme*/
+header .menu .open .profileOpenned ul li .tema .toggleTheme > .left,
+header .menu .open .profileOpenned ul li .tema .toggleTheme > .right{
+    transition: 0.3s;
+}
+
+header .menu .open .profileOpenned ul li .tema .toggleTheme > .left{
     left: 0;
-    transition: 0.3s;
 }
-header .menu .open .toggleTheme .right{
+header .menu .open .profileOpenned ul li .tema .toggleTheme > .right{
     left: 28px;
-    transition: 0.3s;
 }
 
-header .menu ul .open .tema{
+header .menu .open .profileOpenned ul li .tema {
     display: flex;
 }
 
