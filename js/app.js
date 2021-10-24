@@ -22,10 +22,14 @@ const toggleTheme = () => {
     if(document.querySelector('.right')){
         document.querySelector('main').classList.add('darkTheme')
         document.querySelector('.profileOpenned').classList.add('darkTheme')
+        document.querySelector('header').classList.add('darkTheme')
+        document.querySelector('footer').classList.add('darkTheme')
         
     } else {
         document.querySelector('main').classList.remove('darkTheme')
         document.querySelector('.profileOpenned').classList.remove('darkTheme')
+        document.querySelector('header').classList.remove('darkTheme')
+        document.querySelector('footer').classList.remove('darkTheme')
     }
 }
 

@@ -1,13 +1,29 @@
-.darkTheme{
-    background-color: #2e2d30;
+header.darkTheme{
+    background-color: #161B22;
+}
+
+footer.darkTheme{
+    background-color: #515561;
+}
+
+footer.darkTheme > .content-footer{
+    border-color: #787c8a;
+}
+
+
+
+.darkTheme .container{
+    background:
+    linear-gradient(#161B22, #515561);
 }
 
 .darkTheme .container .box{
 
-    background-color: #171720;
-    border-color: rgb(83, 0, 248);
-    box-shadow: 0 0 13px rgb(83, 0, 248);
+    background-color:#1E2027;
+    border-color: rgb(31, 31, 31);
 
+    box-shadow: 0 0 12px #1118,
+    4px 0 7px #1114;
 }
 
 .darkTheme .container .box .content .pergunta > p,
@@ -17,7 +33,7 @@
 }
 
 .darkTheme .container .box .content .respostas .resposta{
-    border-color: #424250;
+    border-color: #3c3c3f;
     background-color: #1b1b24;
 }
 
@@ -31,8 +47,7 @@
 }
 
 .darkTheme .container  .box .respostas .resposta.active{
-    background-color: rgba(83, 0, 248, 0.124);
-    box-shadow: 0 0 13px rgb(83, 0, 248);
+    background-color: rgba(123, 122, 124, 0.425);
 }
 
 .darkTheme .container .box .respostas .resposta.active label{
@@ -40,13 +55,32 @@
 }
 
 /* profile dark */
+header .menu .open .darkTheme ul li:hover{
+    background-color: rgb(22, 113, 209);
+}
+
+header .menu .open .darkTheme > ul li:nth-child(4),
 header .menu .open .darkTheme,
 header .menu .open .darkTheme + .triangule{
-    background-color: rgb(31, 32, 34);
-    border-color: rgb(145, 145, 163);
+    background-color: #424242;
+    border-color: rgb(88, 88, 95);
 }
 
 header .menu .open .darkTheme ul li a,
 header .menu .open .darkTheme ul li > .tema{
     color: rgb(232, 232, 232);
+}
+
+header .menu .open .darkTheme > ul li .tema .toggleTheme .ballTheme{
+    box-shadow: inset 0px 0 1px 3px rgb(255, 232, 232),
+     0 0 12px #333;
+    background-color: transparent;
+}
+
+.darkTheme .box > button{
+    background: #424242;
+}
+
+.darkTheme .box > button:hover{
+    background: #333333;
 }

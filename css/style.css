@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+:root{
+    --primary: #56A3A6;
+    --secondary: #484538;
+}
+
 /*Estructure*/
 
 body{
@@ -15,7 +20,7 @@ footer, header{
     width: 100%;
     min-height: 80px;
     position: relative;
-    background-color: rgb(124, 55, 214);
+    background-color: #56A3A6;
 }
 
 header{
@@ -24,6 +29,17 @@ header{
 
 footer{
     bottom: 0;
+}
+
+footer > .content-footer{
+    width: 85%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    position: absolute;
+
+    border-top: 1px solid transparent;
 }
 
 main{
@@ -74,6 +90,8 @@ header .menu .logo{
 header .menu .logo h1{
     font-size: 25px;
     font-family: 'antapani';
+
+    color: #fff;
 }
 
 header .menu .normal{
@@ -99,12 +117,10 @@ header .menu .hamburguer{
 }
 
 header .menu .normal .btnHamburguer{
-   
     display: none;
 }
 
-
-header .menu ul li{
+header .menu ul .itensMenu > li{
     margin: 0 5px 0 5px;
     
     height: fit-content;
@@ -115,11 +131,11 @@ header .menu ul li{
     
 }
 
-header .menu ul li a:hover{
+header .menu ul .itensMenu > li a:hover{
     background-color: rgba(255, 255, 255, 0.193);
 }
 
-header .menu ul li a{
+header .menu ul .itensMenu > li a{
     text-decoration: none;
     width: 100%;
     height: 100%;
@@ -134,11 +150,11 @@ header .menu ul li a{
 }
 
 
-header .menu ul li:nth-child(1) a{
+header .menu ul .itensMenu > li:nth-child(1) a{
     background-color: rgba(255, 255, 255, 0.193);
 }
 
-header .menu ul li:nth-child(3){
+header .menu > ul .itensMenu > li:nth-child(3){
     display: flex;
     justify-content: center;
     align-items: center;
@@ -155,13 +171,13 @@ header .menu ul li:nth-child(3){
     background-color: rgba(34, 34, 34, 0.479);
 }
 
-header .menu ul li:nth-child(3) img{
+header .menu ul .itensMenu > li:nth-child(3) img{
     position: relative;
     object-fit: contain;
     width:  40px;
 }
 
-header .menu ul li{
+header .menu ul .itensMenu > li{
     list-style: none;
 } 
 
@@ -229,8 +245,9 @@ main .container{
 .box .prev-next .prev{
     width: 30px;
     height: 30px;
-    border-left: 2px solid #7C37D6;
-    border-top: 2px solid #7C37D6;
+    border-width: 2px 0 0 2px;
+    border-color: #56A3A6;
+    border-style: solid;
 
     cursor: pointer;
 }
@@ -249,10 +266,14 @@ main .container{
     border: none;
     padding: 13px 30px;
     border-radius: 5px;
-    background:#7C37D6;
+    background: #56A3A6;
     color: #ffffff;
     font-weight: 900;
     cursor: pointer;
+}
+
+.box button:hover{
+    background: #498486;
 }
 
 .box .pergunta{
@@ -308,11 +329,11 @@ main .container{
 }
 
 .box .respostas .resposta:hover{
-    background-color: rgba(20, 81, 236, 0.14);
+    background-color: #abc6c754;
 }
 
 .box .respostas .resposta.active{
-    background-color: rgb(102, 20, 236);
+    background-color: #4a8486;
 }
 
 .box .respostas .resposta.active label{
@@ -327,7 +348,7 @@ main .container{
 }
 
 .box .respostas .resposta label{
-    color: rgb(27, 47, 199);
+    color: #62aeb1;
     
     font-weight: 900;
     font-size: 13px;
@@ -348,10 +369,7 @@ header .closed{
 }
 
 header .open{
-    opacity: 80%;
-
     display: flex;
-
     z-index: 10;
 }
 
@@ -364,7 +382,10 @@ header .open .triangule{
 header .open .profileOpenned{
     position: absolute;
 
-    width: 200px;
+    display: flex;
+    align-items: center;
+
+    width: 185px;
     height: 200px;
 
     border-radius: 5px;
@@ -391,14 +412,23 @@ header .open .triangule{
     top: 64.7px;
 }
 
+header .menu .open .profileOpenned > ul li .tema{
+    margin-top: 15px;
+}
+
+header .menu .open .profileOpenned > ul li:nth-child(4):hover{
+    background-color: transparent;
+}
+
 /* cor borda perfil aberto */
+header .menu .open .profileOpenned > ul li:nth-child(4),
 header .open .profileOpenned,
 header .open .triangule{
     border-style: solid;
-    border-color: rgb(172, 172, 172);
+    border-color: rgb(214, 214, 214);
 }
 
-header .open .profileOpenned ul{
+header .open .profileOpenned > ul{
     list-style: none;
 
     display: flex;
@@ -407,44 +437,69 @@ header .open .profileOpenned ul{
     align-items: flex-start;
 
     width: 100%;
-    height: 100%;
+    height: 80%;
 
     position: relative;
 }
 
-header .menu .open .profileOpenned ul li a{
-    text-decoration: none;
-    background: transparent;
+header .menu .open .profileOpenned > ul li{
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+    padding: 0 15px;
+
+    display: flex;
+    align-items: center;
+    
+    position: relative;
 }
 
-header .menu .open .profileOpenned ul li a,
-header .menu .open .profileOpenned ul li > .tema{
+header .menu .open .profileOpenned > ul li:hover{
+    background-color: #c9c9c9;
+}
+
+header .menu .open .profileOpenned > ul li a{
+    text-decoration: none;
+    
+    display: inherit;
+    align-items: inherit;
+    
+    margin: 0;
+    border-radius: 0;
+    
+    width: 100%;
+    height: 100%;
+    
+    position: relative;
+}
+
+header .menu .open .profileOpenned > ul li:nth-child(4){
+    border-width: 1px 0 0 0;
+}
+
+header .menu .open .profileOpenned > ul li a,
+header .menu .open .profileOpenned > ul li > .tema{
     color: rgb(68, 66, 66);
     font-size: 15px;
 }
 
-header .menu .open .profileOpenned ul li > .tema{
+header .menu .open .profileOpenned > ul li > .tema{
     bottom: 5px;
     left: 0;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background-color: #181616;
-
 }
 
-header .menu .open .profileOpenned ul li .tema .toggleTheme{
+/* toggle theme button */
+header .menu .open .profileOpenned > ul li .tema .toggleTheme{
     width: 50px;
     height: 20px;
 
-    border: 1px solid rgb(199, 199, 199);
+    border: 1px solid rgb(141, 141, 141);
     border-radius: 30px;
 
     overflow: hidden;
 
-    margin-left: 20px;
+    margin-right: 10px;
 
     position: relative;
     display: flex;
@@ -453,30 +508,31 @@ header .menu .open .profileOpenned ul li .tema .toggleTheme{
     cursor: pointer;
 }
 
-header .menu .open .profileOpenned ul li .tema .toggleTheme .ballTheme{
-    width: 20px;
-    height: 20px;
+header .menu .open .profileOpenned > ul li .tema .toggleTheme .ballTheme{
+    width: 18px;
+    height: 18px;
     
     border-radius: 60%;
-    background-color: #5a5959;
+    background-color: rgb(87, 87, 87);
     position: relative;
 
+    box-shadow: inset 0px 0 7px 2px rgb(163, 163, 163);
 }
 
 /*ball toggle theme*/
-header .menu .open .profileOpenned ul li .tema .toggleTheme > .left,
-header .menu .open .profileOpenned ul li .tema .toggleTheme > .right{
+header .menu .open .profileOpenned > ul li .tema .toggleTheme > .left,
+header .menu .open .profileOpenned > ul li .tema .toggleTheme > .right{
     transition: 0.3s;
 }
 
-header .menu .open .profileOpenned ul li .tema .toggleTheme > .left{
+header .menu .open .profileOpenned > ul li .tema .toggleTheme > .left{
     left: 0;
 }
-header .menu .open .profileOpenned ul li .tema .toggleTheme > .right{
-    left: 28px;
+header .menu .open .profileOpenned > ul li .tema .toggleTheme > .right{
+    left: 30px;
 }
 
-header .menu .open .profileOpenned ul li .tema {
+header .menu .open .profileOpenned > ul li .tema {
     display: flex;
 }
 
